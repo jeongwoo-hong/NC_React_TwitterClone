@@ -1,8 +1,7 @@
-import React from "react"
+import React, { useState }  from "react"
 import { HashRouter as Router, Route, Switch } from "react-router-dom"
 import Auth from "../routes/Auth"
 import Home from "../routes/Home"
-import { useState } from "react"
 
 const AppRouter = ({isLoggedIn}) => {
         return (
@@ -14,7 +13,8 @@ const AppRouter = ({isLoggedIn}) => {
                             <Home />
                         </Route>
                     </>
-                    ) : (<Route exact path="/">
+                    ) : (
+                        <Route exact path="/">
                             <Auth/>
                         </Route>
                     )}
